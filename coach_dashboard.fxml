@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@stylea.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gymapp.CoachDashboardController">
+   <children>
+      <AnchorPane layoutX="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="765.0" prefWidth="834.0" styleClass="side-form" stylesheets="@stylea.css">
+         <children>
+            <AnchorPane fx:id="chatform" layoutX="225.0" layoutY="2.0" prefHeight="765.0" prefWidth="616.0">
+               <children>
+                  <AnchorPane layoutX="112.0" layoutY="14.0" prefHeight="64.0" prefWidth="415.0" styleClass="vbox" stylesheets="@../../../../../../../../../Downloads/Trainer+Member%20normal/Trainer+Member%20normal/Trainer/src/main/resources/com/example/trainer/style.css">
+                     <children>
+                        <Button fx:id="pvtchat" layoutX="137.0" layoutY="28.0" mnemonicParsing="false" onAction="#switchform2" styleClass="side-btn" stylesheets="@stylea.css" text="Private Chat">
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pvtchatfrorm" layoutX="66.0" layoutY="127.0" prefHeight="602.0" prefWidth="507.0" styleClass="vbox" stylesheets="@stylea.css">
+                     <children>
+                        <TextArea fx:id="chat1TextArea" layoutX="118.0" layoutY="14.0" prefHeight="130.0" prefWidth="312.0" />
+                        <TextArea fx:id="chat2TextArea" layoutX="118.0" layoutY="215.0" prefHeight="130.0" prefWidth="312.0" />
+                        <TextArea fx:id="chat3TextArea" layoutX="118.0" layoutY="417.0" prefHeight="130.0" prefWidth="312.0" />
+                        <TextField fx:id="chat1TextField" layoutX="118.0" layoutY="157.0" prefHeight="39.0" prefWidth="193.0" styleClass="side-chat" stylesheets="@stylea.css" />
+                        <TextField fx:id="chat2TextField" layoutX="118.0" layoutY="356.0" prefHeight="39.0" prefWidth="193.0" styleClass="side-chat" stylesheets="@stylea.css" />
+                        <Button fx:id="coach_member1_chat_sendBtn" defaultButton="true" layoutX="334.0" layoutY="157.0" mnemonicParsing="false" onAction="#onSendChat1" prefHeight="29.0" prefWidth="98.0" styleClass="side-btn" stylesheets="@stylea.css" text="Send🚀">
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="coach_member2_chat_sendBtn" layoutX="334.0" layoutY="356.0" mnemonicParsing="false" onAction="#onSendChat2" prefHeight="29.0" prefWidth="98.0" styleClass="side-btn" stylesheets="@stylea.css" text="Send🚀">
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Button>
+                        <TextField fx:id="chat3TextField" layoutX="118.0" layoutY="557.0" prefHeight="39.0" prefWidth="193.0" styleClass="side-chat" stylesheets="@stylea.css" />
+                        <Button fx:id="coach_member3_chat_sendBtn" layoutX="324.0" layoutY="557.0" mnemonicParsing="false" onAction="#onSendChat3" prefHeight="29.0" prefWidth="98.0" styleClass="side-btn" stylesheets="@stylea.css" text="Send🚀">
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Button>
+                        <Label layoutX="36.0" layoutY="60.0" prefHeight="29.0" prefWidth="120.0" rotate="-90.0" text="Member-1" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="36.0" layoutY="261.0" prefHeight="29.0" prefWidth="120.0" rotate="-90.0" text="Member-2" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="36.0" layoutY="463.0" prefHeight="29.0" prefWidth="120.0" rotate="-90.0" text="Member-3" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Line endX="-100.0" endY="716.0" layoutX="114.0" layoutY="49.0" startX="-100.0" startY="-49.0" stroke="WHITE" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="notice" layoutX="231.0" layoutY="1.0" prefHeight="771.0" prefWidth="602.0" visible="false">
+               <children>
+                  <Line endX="-100.0" endY="766.0" layoutX="100.0" layoutY="-2.0" startX="-100.0" stroke="WHITE" />
+                  <AnchorPane layoutX="130.0" layoutY="107.0" prefHeight="609.0" prefWidth="343.0" styleClass="vbox" stylesheets="@stylea.css">
+                     <children>
+                        <TextArea fx:id="noticeTextArea" layoutX="28.0" layoutY="25.0" prefHeight="457.0" prefWidth="284.0" />
+                        <TextField fx:id="coach_notice_inputField" layoutX="28.0" layoutY="498.0" prefHeight="39.0" prefWidth="284.0" styleClass="side-chat" stylesheets="@stylea.css" />
+                        <Button fx:id="coach_notice_sendBtn" layoutX="127.0" layoutY="557.0" mnemonicParsing="false" onAction="#onSendNotice" styleClass="side-btn" stylesheets="@stylea.css" text="Notice" />
+                     </children>
+                  </AnchorPane>
+                  <Text fill="WHITE" fontSmoothingType="LCD" layoutX="195.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notice Area" textAlignment="JUSTIFY">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="38.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="assignmentform" layoutX="220.0" layoutY="2.0" prefHeight="765.0" prefWidth="616.0" visible="false">
+               <children>
+                  <Line endX="-100.0" endY="758.0" layoutX="114.0" layoutY="1.0" startX="-100.0" stroke="WHITE" />
+                  <Text fill="WHITE" layoutX="222.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task Area">
+                     <font>
+                        <Font name="Arial Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane layoutX="50.0" layoutY="130.0" prefHeight="247.0" prefWidth="253.0" styleClass="vbox" stylesheets="@stylea.css">
+                     <children>
+                        <TextArea fx:id="assign1TextArea" layoutX="27.0" layoutY="24.0" prefHeight="130.0" prefWidth="200.0" />
+                        <TextField fx:id="assign1TextField" layoutX="27.0" layoutY="169.0" prefHeight="39.0" prefWidth="200.0" styleClass="side-chat" stylesheets="@stylea.css" />
+                        <Button fx:id="coach_send_assignments_to_member1Btn" layoutX="79.0" layoutY="220.0" mnemonicParsing="false" onAction="#onAssign1" styleClass="side-btn" stylesheets="@stylea.css" text="Send🚀">
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="119.0" layoutY="91.0" prefHeight="29.0" prefWidth="120.0" text="Member-1" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="388.0" layoutY="91.0" prefHeight="29.0" prefWidth="120.0" text="Member-2" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="258.0" layoutY="422.0" prefHeight="29.0" prefWidth="120.0" text="Member-3" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="330.0" layoutY="130.0" prefHeight="247.0" prefWidth="253.0" styleClass="vbox" stylesheets="@stylea.css">
+                     <children>
+                        <TextArea fx:id="assign2TextArea" layoutX="27.0" layoutY="24.0" prefHeight="130.0" prefWidth="200.0" />
+                        <TextField fx:id="assign2TextField" layoutX="27.0" layoutY="169.0" prefHeight="39.0" prefWidth="200.0" styleClass="side-chat" stylesheets="@stylea.css" />
+                        <Button fx:id="coach_send_assignments_to_member2Btn" layoutX="79.0" layoutY="221.0" mnemonicParsing="false" onAction="#onAssign2" styleClass="side-btn" stylesheets="@stylea.css" text="Send🚀">
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="189.0" layoutY="451.0" prefHeight="247.0" prefWidth="253.0" styleClass="vbox" stylesheets="@stylea.css">
+                     <children>
+                        <TextArea fx:id="assign3TextArea" layoutX="27.0" layoutY="24.0" prefHeight="130.0" prefWidth="200.0" />
+                        <TextField fx:id="assign3TextField" layoutX="27.0" layoutY="169.0" prefHeight="39.0" prefWidth="200.0" styleClass="side-chat" stylesheets="@stylea.css" />
+                        <Button fx:id="coach_send_assignments_to_member3Btn" layoutX="79.0" layoutY="220.0" mnemonicParsing="false" onAction="#onAssign3" styleClass="side-btn" stylesheets="@stylea.css" text="Send🚀">
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <Line endX="100.0" layoutX="309.0" layoutY="65.0" startX="-100.0" stroke="WHITE" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="-3.0" prefHeight="771.0" prefWidth="244.0" styleClass="side-form2" stylesheets="@stylea.css">
+               <children>
+                  <Label fx:id="coach_name" alignment="CENTER" layoutX="-10.0" layoutY="42.0" prefHeight="97.0" prefWidth="244.0" text="Coach" textAlignment="CENTER" textFill="#1e1e1e">
+                     <font>
+                        <Font name="Algerian" size="33.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="6.0" layoutY="108.0" prefHeight="76.0" prefWidth="233.0" text="Dashboard">
+                     <font>
+                        <Font name="Algerian" size="35.0" />
+                     </font>
+                  </Label>
+                  <VBox layoutX="17.0" layoutY="216.0" prefHeight="379.0" prefWidth="212.0" styleClass="vbox2" stylesheets="@stylea.css">
+                     <children>
+                        <Button fx:id="chat" mnemonicParsing="false" onAction="#switchform" prefHeight="52.0" prefWidth="252.0" styleClass="side-btn" stylesheets="@stylea.css" text="Chat" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="noticebutton" mnemonicParsing="false" onAction="#switchform" prefHeight="52.0" prefWidth="252.0" styleClass="side-btn" stylesheets="@stylea.css" text="Notice" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="80.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="assignment" mnemonicParsing="false" onAction="#switchform" prefHeight="52.0" prefWidth="252.0" styleClass="side-btn" stylesheets="@stylea.css" text="Assignment" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="80.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Button layoutX="53.0" layoutY="666.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="46.0" prefWidth="138.0" styleClass="side-btn" stylesheets="@stylea.css" text="Exit" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

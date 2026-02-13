@@ -1,0 +1,48 @@
+.root-pane {
+    -fx-background-color: black;
+}
+
+/* Welcome text */
+.welcome-text {
+    -fx-text-fill: white;
+    -fx-font-family: "Consolas";
+    -fx-font-size: 18px;
+}
+
+/* ADMIN text */
+.admin-text {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+}
+
+/* Logo lines */
+.logo-line {
+    -fx-stroke: white;
+    -fx-stroke-width: 2;
+}
+
+/* Logo ball */
+.logo-ball {
+    -fx-fill: white;
+}
+
+/* Input field */
+.input-field {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: gray;
+}
+
+/* Login button */
+.login-button {
+    -fx-background-color: #1B6B3A;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-font-size: 14px;
+}
+.login-button:hover {
+    -fx-background-color: #2E8B57;
+}

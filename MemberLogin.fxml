@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gymapp.MemberLoginController">
+   <children>
+      <AnchorPane style="-fx-background-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutX="65.0" layoutY="114.0" prefHeight="128.0" prefWidth="480.0" text="BUDDY!" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="88.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="198.0" layoutY="75.0" prefHeight="45.0" prefWidth="211.0" text="Hello" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="40.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordField" alignment="CENTER" layoutX="142.0" layoutY="388.0" prefHeight="25.0" prefWidth="325.0" promptText="Password" style="-fx-background-radius: 20;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </PasswordField>
+            <Button fx:id="loginButton" layoutX="222.0" layoutY="466.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="50.0" prefWidth="161.0" style="-fx-background-color: #00722E; -fx-background-radius: 20;" text="Login" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <TextField fx:id="memberIdField" alignment="CENTER" layoutX="146.0" layoutY="315.0" prefHeight="44.0" prefWidth="316.0" promptText="Member ID" style="-fx-background-radius: 20;">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER" layoutX="98.0" layoutY="227.0" prefHeight="55.0" prefWidth="409.0" text="Ready for workout?" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="35.0" />
+               </font>
+            </Label>
+            <Button fx:id="backBtn" alignment="CENTER_RIGHT" layoutX="528.0" layoutY="687.0" mnemonicParsing="false" onAction="#backBtn_method" prefHeight="22.0" prefWidth="82.0" style="-fx-background-color: transparent;" text="Back" textFill="#8a8686">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#8a8686" glyphName="ARROW_LEFT" strokeWidth="0.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </FontAwesomeIconView>
+               </graphic>
+            </Button>
+            <Line endX="21.0" layoutX="433.0" layoutY="537.0" startX="-69.0" stroke="#8a8686" strokeWidth="2.0" />
+            <Label layoutX="263.0" layoutY="527.0" text="New User?" textFill="#8a8686">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Line endX="21.0" layoutX="212.0" layoutY="538.0" startX="-69.0" stroke="#8a8686" strokeWidth="2.0" />
+            <Button fx:id="member_registerBtn" layoutX="213.0" layoutY="562.0" mnemonicParsing="false" onAction="#member_registerBtn_method" prefHeight="50.0" prefWidth="183.0" style="-fx-background-color: #00722E; -fx-background-radius: 20;" text="Register" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gymapp.MemberRegistrationController">
+   <children>
+      <AnchorPane style="-fx-background-color: black;">
+         <children>
+            <Button fx:id="backBtn" alignment="CENTER_RIGHT" layoutX="411.0" layoutY="680.0" mnemonicParsing="false" onAction="#backBtn_method" prefHeight="38.0" prefWidth="194.0" style="-fx-background-color: transparent;" text="Back to login page" textFill="#8a8686">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#8a8686" glyphName="ARROW_LEFT" strokeWidth="0.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </FontAwesomeIconView>
+               </graphic>
+            </Button>
+            <Label alignment="CENTER" layoutX="5.0" layoutY="35.0" prefHeight="88.0" prefWidth="600.0" text="Welcome to the Gym!" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="reg_pane1" layoutY="141.0" prefHeight="541.0" prefWidth="610.0">
+               <children>
+                  <Label fx:id="reg_prompt_label" alignment="CENTER" prefHeight="27.0" prefWidth="610.0" text="It will only take a few steps." textFill="WHITE">
+                     <font>
+                        <Font name="EuroRoman" size="23.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="reg_address" layoutX="305.0" layoutY="202.0" prefHeight="122.0" prefWidth="210.0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </TextArea>
+                  <TextField fx:id="reg_phonenum" alignment="CENTER" layoutX="305.0" layoutY="388.0" prefHeight="38.0" prefWidth="210.0" promptText="01xxxxxxxxx" style="-fx-background-radius: 10;">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="125.0" layoutY="90.0" prefHeight="44.0" prefWidth="89.0" text="Name :" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Regular" size="25.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="reg_name" alignment="CENTER" layoutX="305.0" layoutY="90.0" prefHeight="43.0" prefWidth="210.0" promptText="Enter the name" style="-fx-background-radius: 10;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </TextField>
+                  <Label layoutX="125.0" layoutY="385.0" prefHeight="44.0" prefWidth="142.0" text="Phone Number:" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Regular" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="125.0" layoutY="202.0" prefHeight="44.0" prefWidth="103.0" text="Address :" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Regular" size="25.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="nextBtn_1st" layoutX="234.0" layoutY="481.0" mnemonicParsing="false" onAction="#nextBtn_method" prefHeight="43.0" prefWidth="142.0" style="-fx-background-color: white; -fx-background-radius: 20;" text="Next">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="reg_pane2" layoutX="5.0" layoutY="109.0" prefHeight="576.0" prefWidth="610.0" visible="false" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="109.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="184.0" layoutY="24.0" prefHeight="39.0" prefWidth="242.0" text="Alomst there..." textFill="WHITE">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="reg_genderCombo" layoutX="326.0" layoutY="109.0" prefHeight="25.0" prefWidth="174.0" promptText="Choose .  .  .  ." style="-fx-background-color: white; -fx-background-radius: 10;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <InnerShadow radius="6.0" width="5.0" />
+                     </effect>
+                  </ComboBox>
+                  <Label layoutX="136.0" layoutY="100.0" prefHeight="44.0" prefWidth="110.0" text="Gender :" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Regular" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="136.0" layoutY="192.0" prefHeight="44.0" prefWidth="122.0" text="Schedule :" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Regular" size="25.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="reg_scheduleCombo" layoutX="326.0" layoutY="202.0" prefHeight="25.0" prefWidth="174.0" promptText="Choose .  .  .  ." style="-fx-background-color: white; -fx-background-radius: 10;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <InnerShadow radius="6.0" width="5.0" />
+                     </effect>
+                  </ComboBox>
+                  <Label layoutX="136.0" layoutY="293.0" prefHeight="44.0" prefWidth="76.0" text="Start :" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Regular" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="136.0" layoutY="396.0" prefHeight="44.0" prefWidth="62.0" text="End :" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Regular" size="25.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="reg_end" layoutX="326.0" layoutY="406.0" style="-fx-background-radius: 10;">
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color red="0.2021198868751526" green="0.1739766150712967" blue="0.7368420958518982" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
+                  </DatePicker>
+                  <DatePicker fx:id="reg_start" layoutX="326.0" layoutY="303.0" style="-fx-background-radius: 10;">
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color red="0.2021198868751526" green="0.1739766150712967" blue="0.7368420958518982" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
+                  </DatePicker>
+                  <Button fx:id="reg_complete" layoutX="331.0" layoutY="495.0" mnemonicParsing="false" onAction="#reg_finishBtn_method" prefHeight="46.0" prefWidth="131.0" style="-fx-background-color: white; -fx-background-radius: 20;" text="Finish">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="backToReg_pane1" layoutX="121.0" layoutY="493.0" mnemonicParsing="false" onAction="#backToReg_pane1_method" prefHeight="46.0" prefWidth="131.0" style="-fx-background-color: white; -fx-background-radius: 20;" text="Back">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gymapp.AdminDashboardController">
+   <children>
+      <AnchorPane fx:id="main_pane" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="41.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="1100.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-border-width: .4px .4px .4px .4px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Button fx:id="close" alignment="CENTER" mnemonicParsing="false" onAction="#close" prefHeight="29.0" prefWidth="58.0" style="-fx-background-color: transparent; -fx-cursor: hand;" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#750a0a" glyphName="CLOSE" size=".5cm" text="" textAlignment="CENTER" wrappingWidth="24.635547637939453" />
+                                 </graphic></Button>
+                              <Button fx:id="minimize" alignment="CENTER" layoutX="1162.0" layoutY="2.0" mnemonicParsing="false" onAction="#minimize" prefHeight="34.0" prefWidth="58.0" style="-fx-background-color: transparent; -fx-cursor: hand;" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="2.0">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#750a0a" glyphName="MINUS" size="0.5cm" />
+                                 </graphic>
+                              </Button>
+                              <FontAwesomeIconView glyphName="USERS" layoutX="14.0" layoutY="31.0" size="0.8cm" />
+                              <Label layoutX="58.0" layoutY="9.0" text="Gliched Muscles Manager">
+                                 <font>
+                                    <Font name="Arial Bold Italic" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="679.0" prefWidth="294.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="57.0" prefHeight="684.0" prefWidth="296.0" style="-fx-background-color: #F68E46; -fx-border-color: black; -fx-border-width: 3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="60.0" layoutY="93.0" text="admin logo png/svg/illustrator">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <AnchorPane layoutX="6.0" layoutY="233.0" prefHeight="441.0" prefWidth="284.0" style="-fx-background-color: #5F5F6D; -fx-border-color: black; -fx-border-width: 3;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="233.0">
+                                 <children>
+                                    <Button fx:id="dashboardBtn" layoutX="16.0" layoutY="18.0" mnemonicParsing="false" onAction="#dashboardBtn_method" prefHeight="24.0" prefWidth="251.0" style="-fx-background-color: white; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 3; -fx-cursor: hand;" text="Dashboard">
+                                       <font>
+                                          <Font name="Ebrima" size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow height="40.0" radius="19.5" width="40.0" />
+                                       </effect>
+                                    </Button>
+                                    <Button fx:id="coachesBtn" layoutX="16.0" layoutY="85.0" mnemonicParsing="false" onAction="#coachesBtn_method" prefHeight="24.0" prefWidth="251.0" style="-fx-background-color: black; -fx-cursor: hand; -fx-background-radius: 30; -fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 30;" text="Coaches" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ebrima" size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow height="40.0" radius="19.5" width="40.0" />
+                                       </effect>
+                                    </Button>
+                                    <Button fx:id="memberBtn" layoutX="16.0" layoutY="149.0" mnemonicParsing="false" onAction="#memberBtn_method" prefHeight="24.0" prefWidth="251.0" style="-fx-background-color: black; -fx-cursor: hand; -fx-background-radius: 30; -fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 30;" text="Members" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ebrima" size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow height="40.0" radius="19.5" width="40.0" />
+                                       </effect>
+                                    </Button>
+                                    <Button fx:id="paymentBtn" layoutX="16.0" layoutY="213.0" mnemonicParsing="false" onAction="#paymentBtn_method" prefHeight="24.0" prefWidth="251.0" style="-fx-background-color: black; -fx-cursor: hand; -fx-background-radius: 30; -fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 30;" text="Payment" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ebrima" size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow height="40.0" radius="19.5" width="40.0" />
+                                       </effect>
+                                    </Button>
+                                    <Button fx:id="chatBtn" disable="true" layoutX="16.0" layoutY="276.0" mnemonicParsing="false" onAction="#chatBtn_method" prefHeight="24.0" prefWidth="251.0" style="-fx-background-color: black; -fx-cursor: hand; -fx-background-radius: 30; -fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 30;" text="Chat" textFill="WHITE" visible="false">
+                                       <font>
+                                          <Font name="Ebrima" size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow height="40.0" radius="19.5" width="40.0" />
+                                       </effect>
+                                    </Button>
+                                    <Button fx:id="log_outBtn" layoutX="34.0" layoutY="366.0" mnemonicParsing="false" onAction="#log_outBtn_method" prefHeight="44.0" prefWidth="174.0" style="-fx-background-color: transtapent; -fx-cursor: hand;" text="Log out">
+                                       <graphic>
+                                          <FontAwesomeIconView glyphName="SIGN_OUT" size="0.7cm" />
+                                       </graphic>
+                                       <font>
+                                          <Font name="System Bold" size="25.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="dashboard_pane" layoutX="233.0" layoutY="303.0" prefHeight="679.0" prefWidth="986.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="10.0" layoutY="8.0" prefHeight="196.0" prefWidth="968.0">
+                                 <children>
+                                    <AnchorPane layoutX="20.0" layoutY="14.0" prefHeight="168.0" prefWidth="260.0" style="-fx-border-color: white; -fx-border-width: 1.5;">
+                                       <children>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="USERS" layoutX="14.0" layoutY="100.0" size="85" wrappingWidth="110.0" />
+                                          <Label alignment="CENTER" layoutX="7.0" layoutY="130.0" prefHeight="31.0" prefWidth="247.0" text="Number of Members" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial Bold" size="23.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="dashboard_NumOfMem" alignment="CENTER_RIGHT" layoutX="136.0" layoutY="42.0" prefHeight="48.0" prefWidth="108.0" text="0" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="41.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <effect>
+                                          <DropShadow>
+                                             <color>
+                                                <Color red="1.0" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="354.0" layoutY="14.0" prefHeight="168.0" prefWidth="260.0" style="-fx-border-color: white; -fx-border-width: 1.5;">
+                                       <children>
+                                          <Label layoutX="37.0" layoutY="36.0" text="coach logo" textFill="WHITE">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="11.0" layoutY="129.0" prefHeight="31.0" prefWidth="247.0" text="Number of Coaches" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial Bold" size="23.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="dashboard_NumOfCoach" alignment="CENTER_RIGHT" layoutX="165.0" layoutY="36.0" prefHeight="48.0" prefWidth="83.0" text="0" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="41.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <effect>
+                                          <DropShadow>
+                                             <color>
+                                                <Color red="1.0" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect></AnchorPane>
+                                    <AnchorPane layoutX="685.0" layoutY="14.0" prefHeight="168.0" prefWidth="260.0" style="-fx-border-color: white; -fx-border-width: 1.5;">
+                                       <children>
+                                          <Label layoutX="25.0" layoutY="14.0" text="\$" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="81.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="36.0" layoutY="123.0" prefHeight="31.0" prefWidth="189.0" text="Total Income" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial Bold" size="23.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="dashboard_income" alignment="CENTER_RIGHT" layoutX="96.0" layoutY="36.0" prefHeight="48.0" prefWidth="150.0" text="0" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="41.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <effect>
+                                          <DropShadow>
+                                             <color>
+                                                <Color red="1.0" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect></AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="dashboard_graphPane" layoutX="9.0" layoutY="213.0" prefHeight="457.0" prefWidth="968.0" style="-fx-border-color: white; -fx-border-width: 3;">
+                                 <children>
+                                    <BarChart fx:id="dashboard_graph" layoutX="14.0" layoutY="60.0" prefHeight="379.0" prefWidth="927.0" title="Monthly Income Chart">
+                                        <xAxis>
+                                            <CategoryAxis fx:id="monthAxis" label="Month" />
+                                        </xAxis>
+                                        <yAxis>
+                                            <NumberAxis fx:id="amountAxis" label="Total Amount (৳)" />
+                                        </yAxis>
+                                    </BarChart>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="coaches_pane" prefHeight="679.0" prefWidth="986.0" style="-fx-background-color: black;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane fx:id="coach_assign_pane" prefHeight="679.0" prefWidth="597.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="389.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TableView fx:id="assignment_tableView" layoutX="19.0" layoutY="12.0" prefHeight="429.0" prefWidth="566.0" style="-fx-border-color: white; -fx-border-width: 3; -fx-border-radius: 15;" stylesheets="@styles.css">
+                                       <columns>
+                                          <TableColumn fx:id="assignment_coach_col" prefWidth="181.0" text="Coach ID" />
+                                          <TableColumn fx:id="assignment_member_col" prefWidth="205.0" text="Members " />
+                                          <TableColumn fx:id="assignment_id_col" prefWidth="172.0" text="Status" />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="assign_btn" layoutX="316.0" layoutY="561.0" mnemonicParsing="false" onAction="#assignMemberToCoach" prefHeight="66.0" prefWidth="187.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-cursor: hand;" text="Assign">
+                                       <font>
+                                          <Font name="POSTERABLE" size="28.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </Button>
+                                    <Button fx:id="remove_btn" layoutX="91.0" layoutY="561.0" mnemonicParsing="false" onAction="#removeAssignment" prefHeight="66.0" prefWidth="187.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-cursor: hand;" text="Remove">
+                                       <font>
+                                          <Font name="POSTERABLE" size="28.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </Button>
+                                    <ComboBox fx:id="coach_id_comboBox" layoutX="64.0" layoutY="479.0" prefHeight="47.0" prefWidth="199.0" promptText="                     Coach ID" style="-fx-background-color: white; -fx-background-radius: 20;">
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </ComboBox>
+                                    <ComboBox fx:id="member_id_comboBox" layoutX="324.0" layoutY="479.0" prefHeight="47.0" prefWidth="199.0" promptText="                   Member ID" style="-fx-background-color: white; -fx-background-radius: 20;">
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </ComboBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="coach_add_update_delete_pane" layoutX="8.0" layoutY="7.0" prefHeight="665.0" prefWidth="589.0" style="-fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 3;" visible="false">
+                                 <children>
+                                    <Label layoutX="64.0" layoutY="59.0" prefHeight="44.0" prefWidth="107.0" text="Coach ID :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="coach_nameLabel" layoutX="65.0" layoutY="122.0" prefHeight="44.0" prefWidth="107.0" text="Name :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="coach_addressLabel" layoutX="66.0" layoutY="191.0" prefHeight="44.0" prefWidth="103.0" text="Address :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="coach_genderLabel" layoutX="64.0" layoutY="376.0" prefHeight="44.0" prefWidth="96.0" text="Gender :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="coach_phoneNumLabel" layoutX="64.0" layoutY="315.0" prefHeight="44.0" prefWidth="127.0" text="Phone Number :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="coach_statusLabel" layoutX="64.0" layoutY="431.0" prefHeight="44.0" prefWidth="87.0" text="Status :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="coaches_id" alignment="CENTER" layoutX="340.0" layoutY="59.0" prefHeight="43.0" prefWidth="159.0" promptText="Enter the ID" style="-fx-background-radius: 10;">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow>
+                                             <color>
+                                                <Color red="1.0" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                    </TextField>
+                                    <TextField fx:id="coaches_name" alignment="CENTER" layoutX="314.0" layoutY="123.0" prefHeight="43.0" prefWidth="212.0" promptText="Enter the name" style="-fx-background-radius: 10;">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow>
+                                             <color>
+                                                <Color red="1.0" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                    </TextField>
+                                    <TextArea fx:id="coaches_address" layoutX="315.0" layoutY="191.0" prefHeight="97.0" prefWidth="210.0">
+                                       <effect>
+                                          <DropShadow>
+                                             <color>
+                                                <Color red="1.0" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                    </TextArea>
+                                    <TextField fx:id="coaches_phoneNum" alignment="CENTER" layoutX="314.0" layoutY="323.0" prefHeight="27.0" prefWidth="212.0" promptText="01xxxxxxxxx" style="-fx-background-radius: 10;">
+                                       <effect>
+                                          <DropShadow>
+                                             <color>
+                                                <Color red="1.0" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </TextField>
+                                    <ComboBox fx:id="coaches_status" layoutX="316.0" layoutY="441.0" prefHeight="25.0" prefWidth="209.0" promptText="Choose .  .  .  ." style="-fx-background-color: white; -fx-background-radius: 10;">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <effect>
+                                          <InnerShadow radius="6.0" width="5.0" />
+                                       </effect>
+                                    </ComboBox>
+                                    <ComboBox fx:id="coaches_gender" layoutX="315.0" layoutY="386.0" prefHeight="25.0" prefWidth="209.0" promptText="Choose .  .  .  ." style="-fx-background-color: white; -fx-background-radius: 10;">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <effect>
+                                          <InnerShadow radius="6.0" width="5.0" />
+                                       </effect>
+                                    </ComboBox>
+                                    <Button fx:id="coaches_addBtn" layoutX="110.0" layoutY="515.0" mnemonicParsing="false" onAction="#coaches_addBtn_method" prefHeight="66.0" prefWidth="182.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-cursor: hand;" text="Add">
+                                       <font>
+                                          <Font name="POSTERABLE" size="28.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </Button>
+                                    <Button fx:id="coaches_updateBtn" layoutX="108.0" layoutY="515.0" mnemonicParsing="false" onAction="#coaches_updateBtn_method" prefHeight="66.0" prefWidth="186.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-cursor: hand;" text="Update">
+                                       <font>
+                                          <Font name="POSTERABLE" size="28.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </Button>
+                                    <Button fx:id="coaches_resetBtn" layoutX="373.0" layoutY="515.0" mnemonicParsing="false" onAction="#coaches_resetBtn_method" prefHeight="66.0" prefWidth="135.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-cursor: hand;" text="Reset">
+                                       <font>
+                                          <Font name="POSTERABLE" size="28.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="coach_mainBtns_pane" layoutX="606.0" layoutY="7.0" prefHeight="665.0" prefWidth="374.0" style="-fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 3;">
+                                 <children>
+                                    <Button fx:id="coaches_go_to_delete_paneBtn" layoutX="23.0" layoutY="431.0" mnemonicParsing="false" onAction="#coaches_go_to_delete_paneBtn_method" prefHeight="66.0" prefWidth="268.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-cursor: hand;" text="Delete a Coach">
+                                       <font>
+                                          <Font name="POSTERABLE" size="28.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </Button>
+                                    <Button fx:id="coaches_assignmentBtn" layoutX="104.0" layoutY="554.0" mnemonicParsing="false" onAction="#coaches_assignmentBtn_method" prefHeight="66.0" prefWidth="256.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-cursor: hand;" text="Assignments">
+                                       <font>
+                                          <Font name="POSTERABLE" size="25.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </Button>
+                                    <Button fx:id="coaches_go_to_add_paneBtn" layoutX="21.0" layoutY="169.0" mnemonicParsing="false" onAction="#coaches_go_to_add_paneBtn_method" prefHeight="67.0" prefWidth="269.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-cursor: hand;" text="Add a new Coach">
+                                       <font>
+                                          <Font name="POSTERABLE" size="28.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </Button>
+                                    <Button fx:id="coaches_go_to_update_paneBtn" layoutX="92.0" layoutY="300.0" mnemonicParsing="false" onAction="#coaches_go_to_update_paneBtn_method" prefHeight="66.0" prefWidth="267.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-cursor: hand;" text="Update a Coach ">
+                                       <font>
+                                          <Font name="POSTERABLE" size="28.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </Button>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" layoutX="302.0" layoutY="222.0" size="55" text="" wrappingWidth="31.0" />
+                                    <FontAwesomeIconView fill="WHITE" glyphName="EDIT" layoutX="23.0" layoutY="358.0" size="55" text="" />
+                                    <FontAwesomeIconView fill="WHITE" glyphName="USER_TIMES" layoutX="302.0" layoutY="483.0" size="55" />
+                                    <FontAwesomeIconView fill="WHITE" glyphName="COGS" layoutX="26.0" layoutY="610.0" size="55" />
+                                    <Button fx:id="coaches_view_list_paneBtn" layoutX="97.0" layoutY="42.0" mnemonicParsing="false" onAction="#coaches_view_listBtn_method" prefHeight="67.0" prefWidth="252.0" style="-fx-background-color: #F68E46; -fx-background-radius: 20; -fx-cursor: hand;" text="View the list">
+                                       <font>
+                                          <Font name="POSTERABLE" size="28.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </Button>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="TABLE" layoutX="23.0" layoutY="98.0" size="55" wrappingWidth="51.35714340209961" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="coach_table_pane" layoutX="5.0" layoutY="7.0" prefHeight="665.0" prefWidth="595.0" style="-fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 3;">
+                                 <children>
+                                    <TableView fx:id="coaches_tableView" layoutX="6.0" prefHeight="665.0" prefWidth="596.0" style="-fx-border-color: red; -fx-border-width: 3; -fx-border-radius: 15;" stylesheets="@styles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <columns>
+                                          <TableColumn fx:id="coaches_t_id" prefWidth="90.0" text="Coach ID" />
+                                          <TableColumn fx:id="coaches_t_name" prefWidth="94.0" text="Name" />
+                                          <TableColumn fx:id="coaches_t_address" prefWidth="116.0" text="Address" />
+                                          <TableColumn fx:id="coaches_t_gender" minWidth="0.0" prefWidth="78.0" text="Gender" />
+                                          <TableColumn fx:id="coaches_t_phoneNumber" prefWidth="123.0" text="Phone number" />
+                                          <TableColumn fx:id="coaches_t_status" prefWidth="87.0" text="Status" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="coach_delete_pane" layoutX="14.0" layoutY="14.0" prefHeight="651.0" prefWidth="570.0" style="-fx-border-color: white;" visible="false">
+                                 <children>
+                                    <Button fx:id="coaches_deleteBtn" layoutX="186.0" layoutY="403.0" mnemonicParsing="false" onAction="#coaches_deleteBtn_method" prefHeight="66.0" prefWidth="186.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-cursor: hand;" text="Delete">
+                                       <font>
+                                          <Font name="POSTERABLE" size="28.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </Button>
+                                    <Label alignment="CENTER" layoutX="141.0" layoutY="101.0" prefHeight="82.0" prefWidth="275.0" text="Coach ID :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="44.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="coaches_id1" alignment="CENTER" layoutX="137.0" layoutY="206.0" prefHeight="61.0" prefWidth="283.0" promptText="Enter the ID" style="-fx-background-radius: 10;">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow>
+                                             <color>
+                                                <Color red="1.0" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="member_pane" prefHeight="679.0" prefWidth="986.0" style="-fx-background-color: black;" visible="false">
+                           <children>
+                              <AnchorPane fx:id="members_add_update_pane" layoutX="4.0" layoutY="5.0" prefHeight="436.0" prefWidth="977.0" style="-fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 3;" visible="false">
+                                 <children>
+                                    <TextField fx:id="members_id" alignment="CENTER" layoutX="153.0" layoutY="22.0" prefHeight="43.0" prefWidth="194.0" promptText="Enter the ID" style="-fx-background-radius: 10;">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow>
+                                             <color>
+                                                <Color red="1.0" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                    </TextField>
+                                    <TextArea fx:id="members_address" layoutX="146.0" layoutY="170.0" prefHeight="122.0" prefWidth="210.0">
+                                       <effect>
+                                          <DropShadow>
+                                             <color>
+                                                <Color red="1.0" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                    </TextArea>
+                                    <TextField fx:id="members_phoneNum" alignment="CENTER" layoutX="175.0" layoutY="383.0" prefHeight="27.0" prefWidth="152.0" promptText="01xxxxxxxxx" style="-fx-background-radius: 10;">
+                                       <effect>
+                                          <DropShadow>
+                                             <color>
+                                                <Color red="1.0" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </TextField>
+                                    <ComboBox fx:id="members_gender" layoutX="160.0" layoutY="326.0" prefHeight="25.0" prefWidth="174.0" promptText="Choose .  .  .  ." style="-fx-background-color: white; -fx-background-radius: 10;">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <effect>
+                                          <InnerShadow radius="6.0" width="5.0" />
+                                       </effect>
+                                    </ComboBox>
+                                    <Label layoutX="14.0" layoutY="21.0" prefHeight="31.0" prefWidth="126.0" text="Member ID :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="20.0" layoutY="97.0" prefHeight="44.0" prefWidth="89.0" text="Name :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="members_name" alignment="CENTER" layoutX="155.0" layoutY="97.0" prefHeight="43.0" prefWidth="196.0" promptText="Enter the name" style="-fx-background-radius: 10;">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow>
+                                             <color>
+                                                <Color red="1.0" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                    </TextField>
+                                    <Label layoutX="20.0" layoutY="316.0" prefHeight="44.0" prefWidth="96.0" text="Gender :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="20.0" layoutY="374.0" prefHeight="44.0" prefWidth="127.0" text="Phone Number:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="394.0" layoutY="345.0" prefHeight="44.0" prefWidth="104.0" text="Schedule :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="members_schedule" layoutX="516.0" layoutY="354.0" prefHeight="25.0" prefWidth="136.0" promptText="Choose .  .  .  ." style="-fx-background-color: white; -fx-background-radius: 10;">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <effect>
+                                          <InnerShadow radius="6.0" width="5.0" />
+                                       </effect>
+                                    </ComboBox>
+                                    <Label layoutX="394.0" layoutY="27.0" prefHeight="44.0" prefWidth="76.0" text="Start :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="394.0" layoutY="119.0" prefHeight="44.0" prefWidth="62.0" text="End :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="394.0" layoutY="231.0" prefHeight="44.0" prefWidth="86.0" text="Status :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="members_status" layoutX="491.0" layoutY="240.0" prefHeight="25.0" prefWidth="185.0" promptText="Choose .  .  .  ." style="-fx-background-color: white; -fx-background-radius: 10;">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <effect>
+                                          <InnerShadow radius="6.0" width="5.0" />
+                                       </effect>
+                                    </ComboBox>
+                                    <DatePicker fx:id="members_startDate" layoutX="497.0" layoutY="32.0" style="-fx-background-radius: 10;">
+                                       <effect>
+                                          <InnerShadow>
+                                             <color>
+                                                <Color red="0.2021198868751526" green="0.1739766150712967" blue="0.7368420958518982" />
+                                             </color>
+                                          </InnerShadow>
+                                       </effect>
+                                    </DatePicker>
+                                    <DatePicker fx:id="members_endDate" layoutX="497.0" layoutY="128.0" style="-fx-background-radius: 10;">
+                                       <effect>
+                                          <InnerShadow>
+                                             <color>
+                                                <Color red="0.2021198868751526" green="0.1739766150712967" blue="0.7368420958518982" />
+                                             </color>
+                                          </InnerShadow>
+                                       </effect>
+                                    </DatePicker>
+                                    <Label layoutX="20.0" layoutY="165.0" prefHeight="44.0" prefWidth="103.0" text="Address :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="members_addBtn" layoutX="729.0" layoutY="163.0" mnemonicParsing="false" onAction="#members_addBtn_method" prefHeight="79.0" prefWidth="195.0" style="-fx-background-color: transparent; -fx-background-radius: 20; -fx-border-color: white; -fx-border-radius: 20; -fx-border-width: 3; -fx-cursor: hand;" text="Add" textFill="WHITE">
+                                       <font>
+                                          <Font name="POSTERABLE" size="35.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="members_updateBtn" layoutX="729.0" layoutY="165.0" mnemonicParsing="false" onAction="#members_updateBtn_method" prefHeight="75.0" prefWidth="195.0" style="-fx-background-color: transparent; -fx-background-radius: 20; -fx-border-color: white; -fx-border-radius: 20; -fx-border-width: 3; -fx-cursor: hand;" text="Update" textFill="WHITE">
+                                       <font>
+                                          <Font name="POSTERABLE" size="35.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="members_resetBtn" layoutX="729.0" layoutY="305.0" mnemonicParsing="false" onAction="#members_resetBtn_method" prefHeight="32.0" prefWidth="195.0" style="-fx-background-color: transparent; -fx-background-radius: 20; -fx-border-color: white; -fx-border-radius: 20; -fx-border-width: 3; -fx-cursor: hand;" text="Reset" textFill="WHITE">
+                                       <font>
+                                          <Font name="POSTERABLE" size="21.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="members_table_pane" layoutX="5.0" layoutY="5.0" prefHeight="398.0" prefWidth="977.0" style="-fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 3;">
+                                 <children>
+                                    <TableView fx:id="members_tableView" layoutX="10.0" layoutY="14.0" prefHeight="390.0" prefWidth="962.0" stylesheets="@styles.css" AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="11.0">
+                                       <columns>
+                                          <TableColumn fx:id="members_t_id" prefWidth="84.0" text="Member ID" />
+                                          <TableColumn fx:id="members_t_name" prefWidth="98.0" text="Name" />
+                                          <TableColumn fx:id="members_t_address" prefWidth="147.0" text="Address" />
+                                          <TableColumn fx:id="members_t_gender" prefWidth="105.0" text="Gender" />
+                                          <TableColumn fx:id="members_t_phoneNum" prefWidth="122.0" text="Phone #" />
+                                          <TableColumn fx:id="members_t_schedule" prefWidth="92.0" text="Schedule" />
+                                          <TableColumn fx:id="members_t_start" prefWidth="85.0" text="Start" />
+                                          <TableColumn fx:id="members_t_end" prefWidth="76.0" text="End" />
+                                          <TableColumn fx:id="members_t_status" minWidth="0.0" prefWidth="68.0" text="Status" />
+                                          <TableColumn fx:id="members_t_coach" minWidth="0.0" prefWidth="70.0" text="Coach" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="member_mainBtns_pane" layoutX="5.0" layoutY="451.0" prefHeight="223.0" prefWidth="978.0" style="-fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 3;">
+                                 <children>
+                                    <Button fx:id="members_go_to_delete_paneBtn" layoutX="606.0" layoutY="126.0" mnemonicParsing="false" onAction="#members_go_to_delete_paneBtn_method" prefHeight="66.0" prefWidth="314.0" style="-fx-background-color: transtapenr; -fx-background-radius: 15; -fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 2;" text="Delete a Member" textFill="WHITE">
+                                       <font>
+                                          <Font name="POSTERABLE" size="28.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="members_go_to_add_paneBtn" layoutX="532.0" layoutY="31.0" mnemonicParsing="false" onAction="#members_go_to_add_paneBtn_method" prefHeight="67.0" prefWidth="308.0" style="-fx-background-color: transtapenr; -fx-background-radius: 15; -fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 2;" text="Add a new Member" textFill="WHITE">
+                                       <font>
+                                          <Font name="POSTERABLE" size="28.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="members_go_to_update_paneBtn" layoutX="132.0" layoutY="129.0" mnemonicParsing="false" onAction="#members_go_to_update_panBtn_method" prefHeight="66.0" prefWidth="281.0" style="-fx-background-color: transtapenr; -fx-background-radius: 15; -fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 2;" text="Update a Member" textFill="WHITE">
+                                       <font>
+                                          <Font name="POSTERABLE" size="28.0" />
+                                       </font>
+                                    </Button>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" layoutX="855.0" layoutY="84.0" size="55" text="" wrappingWidth="31.0" />
+                                    <FontAwesomeIconView fill="WHITE" glyphName="EDIT" layoutX="74.0" layoutY="182.0" size="55" text="" />
+                                    <FontAwesomeIconView fill="WHITE" glyphName="USER_TIMES" layoutX="532.0" layoutY="181.0" size="55" text="" />
+                                    <Button fx:id="members_view_list_paneBtn" layoutX="74.0" layoutY="29.0" mnemonicParsing="false" onAction="#members_view_listBtn_method" prefHeight="67.0" prefWidth="277.0" style="-fx-background-color: #F68E46; -fx-background-radius: 15; -fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 2;" text="View the list">
+                                       <font>
+                                          <Font name="POSTERABLE" size="28.0" />
+                                       </font>
+                                    </Button>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="TABLE" layoutX="362.0" layoutY="84.0" size="55" text="" wrappingWidth="51.35714340209961" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="members_delete_pane" layoutX="43.0" layoutY="34.0" prefHeight="375.0" prefWidth="897.0" style="-fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 3;" visible="false">
+                                 <children>
+                                    <Button fx:id="members_deleteBtn" layoutX="336.0" layoutY="252.0" mnemonicParsing="false" onAction="#members_deleteBtn_method" prefHeight="75.0" prefWidth="195.0" style="-fx-background-color: transparent; -fx-background-radius: 20; -fx-border-color: white; -fx-border-radius: 20; -fx-border-width: 3; -fx-cursor: hand;" text="Delete" textFill="WHITE">
+                                       <font>
+                                          <Font name="POSTERABLE" size="35.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="members_id1" alignment="CENTER" layoutX="494.0" layoutY="101.0" prefHeight="64.0" prefWidth="256.0" promptText="Enter the ID" style="-fx-background-radius: 10;">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow>
+                                             <color>
+                                                <Color red="1.0" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                    </TextField>
+                                    <Label layoutX="189.0" layoutY="100.0" prefHeight="66.0" prefWidth="245.0" text="Member ID :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="37.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="payment_pane" prefHeight="679.0" prefWidth="986.0" style="-fx-background-color: black;" visible="false">
+                           <children>
+                              <AnchorPane layoutX="645.0" layoutY="5.0" prefHeight="668.0" prefWidth="335.0" style="-fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 3;">
+                                 <children>
+                                    <Label layoutX="13.0" layoutY="69.0" prefHeight="44.0" prefWidth="125.0" text="Member ID :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="13.0" layoutY="163.0" prefHeight="44.0" prefWidth="85.0" text="Name :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="22.0" layoutY="303.0" prefHeight="44.0" prefWidth="122.0" text="Total Due:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="payment_totalDueLabel" alignment="CENTER_RIGHT" layoutX="146.0" layoutY="303.0" prefHeight="44.0" prefWidth="167.0" text="\$ 00.00" textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="22.0" layoutY="385.0" prefHeight="44.0" prefWidth="114.0" text="Amount :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="payment_amount" alignment="CENTER" layoutX="143.0" layoutY="386.0" prefHeight="43.0" prefWidth="146.0" promptText="\$0.00" style="-fx-background-radius: 10;">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow>
+                                             <color>
+                                                <Color red="1.0" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                    </TextField>
+                                    <Button fx:id="payment_payBtn" layoutX="28.0" layoutY="491.0" mnemonicParsing="false" onAction="#handlePayButton" prefHeight="30.0" prefWidth="279.0" style="-fx-background-color: #005e03; -fx-background-radius: 25;" text="Pay" textFill="WHITE">
+                                       <font>
+                                          <Font name="Gadugi" size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </Button>
+                                    <ComboBox fx:id="payment_id" layoutX="143.0" layoutY="72.0" onAction="#handlePaymentSelection" prefHeight="39.0" prefWidth="178.0" promptText="Select the ID" style="-fx-background-color: white; -fx-background-radius: 10;">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <effect>
+                                          <InnerShadow height="34.72" radius="9.43" width="5.0" />
+                                       </effect>
+                                    </ComboBox>
+                                    <Label fx:id="payment_nameLabel" alignment="CENTER_RIGHT" layoutX="128.0" layoutY="164.0" prefHeight="43.0" prefWidth="193.0" text="...    ...    ..." textFill="WHITE">
+                                       <font>
+                                          <Font name="Dubai Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="2.0" layoutY="2.0" prefHeight="674.0" prefWidth="635.0">
+                                 <children>
+                                    <TableView fx:id="payment_tableView" layoutX="2.0" layoutY="1.0" prefHeight="670.0" prefWidth="633.0" stylesheets="@styles.css" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+                                       <columns>
+                                          <TableColumn fx:id="payment_t_memberId" prefWidth="92.0" text="Member ID" />
+                                          <TableColumn fx:id="payment_t_memberName" prefWidth="104.0" text="Name" />
+                                          <TableColumn fx:id="payment_t_startDate" prefWidth="99.0" text="Start Date" />
+                                          <TableColumn fx:id="payment_t_endDate" prefWidth="101.0" text="End Date" />
+                                          <TableColumn fx:id="payment_t_status" prefWidth="124.0" text="Staus" />
+                                          <TableColumn fx:id="payment_t_totalDue" prefWidth="109.0" text="Total Due" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="chat_pane" disable="true" prefHeight="679.0" prefWidth="986.0" style="-fx-background-color: black;" visible="false">
+                           <children>
+                              <Button fx:id="chat_sendBtn" layoutX="797.0" layoutY="606.0" mnemonicParsing="false" onAction="#chat_sendBtn_method" prefHeight="50.0" prefWidth="160.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-cursor: hand;" text="Send" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="20.0">
+                                 <font>
+                                    <Font name="POSTERABLE" size="28.0" />
+                                 </font>
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                              </Button>
+                              <TextArea fx:id="admin_public_chat_inputField" layoutX="22.0" layoutY="608.0" prefHeight="47.0" promptText="Type . . ." AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="196.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </TextArea>
+                              <TextArea fx:id="admin_public_chatArea" layoutX="22.0" layoutY="24.0" prefHeight="563.0" prefWidth="943.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20" styleClass="root-pane" stylesheets="@admin.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gymapp.AdminLoginController">
+   <children>
+      <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="600.0">
+         <children>
+            <AnchorPane style="-fx-background-color: black;">
+               <children>
+                  <Label alignment="CENTER" layoutX="124.0" layoutY="192.0" prefHeight="119.0" prefWidth="352.0" text="ADMIN" textFill="WHITE">
+                     <font>
+                        <Font name="Tahoma Bold" size="78.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="195.0" layoutY="155.0" prefHeight="45.0" prefWidth="211.0" text="Welcome abroad," textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="25.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="passwordField" alignment="CENTER" layoutX="138.0" layoutY="448.0" prefHeight="57.0" prefWidth="325.0" promptText="Admin Password">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </PasswordField>
+                  <Button fx:id="ad_loginBtn" layoutX="239.0" layoutY="543.0" mnemonicParsing="false" onAction="#openDash" prefHeight="45.0" prefWidth="124.0" style="-fx-background-color: #00722E;" text="Login" textFill="WHITE">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+                  <AnchorPane layoutX="-3.0" layoutY="285.0" prefHeight="160.0" prefWidth="600.0">
+                     <children>
+                        <Line endX="174.0" endY="11.0" layoutX="146.0" layoutY="65.0" startX="-16.0" startY="-29.0" stroke="WHITE" strokeWidth="2.0" />
+                        <Line endX="177.0" endY="-55.0" layoutX="291.0" layoutY="121.0" startX="-17.0" startY="2.0" stroke="WHITE" strokeWidth="2.0" />
+                        <Circle fill="WHITE" layoutX="383.0" layoutY="78.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="backBtn" alignment="CENTER_RIGHT" layoutX="518.0" layoutY="689.0" mnemonicParsing="false" onAction="#backBtn_method" prefHeight="22.0" prefWidth="82.0" style="-fx-background-color: transparent;" text="Back" textFill="#8a8686">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="#8a8686" glyphName="ARROW_LEFT" strokeWidth="0.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</VBox>

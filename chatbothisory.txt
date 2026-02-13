@@ -1,0 +1,90 @@
+You: hi
+Bot: Hi! I am bot, official chatbot of Glitched Gym. How can I help you?
+
+You: how to do a proper squat?
+Bot: Squat tips: Keep your chest up, push hips back, knees out, weight on heels. Depth: thighs parallel or lower.
+
+You: hey
+Bot: Hi! I am bot, official chatbot of Glitched Gym. How can I help
+ you?
+
+You: how to do a proper squat?
+Bot: Squat tips: Keep your chest up, push hips back, knees out,
+ weight on heels. Depth: thighs parallel or lower.
+
+You: what about push ups?
+Bot: Sorry, I didn’t understand. Try asking about
+ workouts, diet, gym info, or motivation!
+
+You: hey
+Bot: Hi! I am bot, official chatbot of Glitched Gym. How can I help
+ you?
+
+You: how to do a proper squat
+Bot: Squat tips: Keep your chest up, push hips back, knees out,
+ weight on heels. Depth: thighs parallel or lower.
+
+You: what about bench press?
+Bot: Bench press rule: Shoulder blades tight, slight arch in back,
+ feet flat, bar touches mid-chest. Don't bounce!
+
+You: i was thinking about bulking, what's the tip?
+Bot: Hi! I am bot, official chatbot of Glitched Gym. How can I help
+ you?
+
+You: hey
+Bot: Hi! I am bot, official chatbot of Glitched Gym. How can I help
+ you?
+
+You: how to do a proper squat?
+Bot: Squat tips: Keep your chest up, push hips back, knees out,
+ weight on heels. Depth: thighs parallel or lower.
+
+You: what about bench press?
+Bot: Bench press rule: Shoulder blades tight, slight arch in back,
+ feet flat, bar touches mid-chest. Don't bounce!
+
+You: things are getting boring in the gym, you know?
+Bot: Hi! I am bot, official chatbot of Glitched Gym. How can I help
+ you?
+
+You: gfgsd
+Bot: Sorry, I didn’t understand. Try asking about
+ workouts, diet, gym info, or motivation!
+
+You: things are getting boring in the gym, you know?
+Bot: Hi! I am bot, official chatbot of Glitched Gym. How can I help
+ you?
+
+You: lazy
+Bot: Motivation won't help you. Discipline will. Wear shoes,
+ go to gym. Done.
+
+You: bulking
+Bot: Clean bulk tip: +300 kcal surplus, high protein, progressive
+ overload. Avoid dirty bulk unless you love regret.
+
+You: wanna do some bulking, what is the tip ?
+Bot: Clean bulk tip: +300 kcal surplus, high protein, progressive
+ overload. Avoid dirty bulk unless you love regret.
+
+You: hey
+Bot: Hi! I am bot, official chatbot of Glitched Gym. How can I help
+ you?
+
+You: how to do a proper squat?
+Bot: Squat tips: Keep your chest up, push hips back, knees out,
+ weight on heels. Depth: thighs parallel or lower.
+
+You: what about bench press?
+Bot: Bench press rule: Shoulder blades tight, slight arch in back,
+ feet flat, bar touches mid-chest. Don't bounce!
+
+You: things are getting boring in here, you know?
+Bot: Change routine, new playlist, new exercises.
+ Boring gym = boring mindset.
+
+You: that response that made me lazy
+Bot: Motivation won't help you. Discipline will. Wear shoes,
+ go to gym. Done.
+

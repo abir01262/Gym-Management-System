@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="side-form" stylesheets="@stylea.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gymapp.MemberDashboardController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="819.0" prefWidth="800.0" styleClass="side-form" stylesheets="@stylea.css">
+         <children>
+            <AnchorPane fx:id="chatform" layoutX="220.0" layoutY="-2.0" prefHeight="823.0" prefWidth="580.0">
+               <children>
+                  <Text fill="WHITE" layoutX="117.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chat Options">
+                     <font>
+                        <Font name="Algerian" size="50.0" />
+                     </font>
+                  </Text>
+                  <VBox layoutX="123.0" layoutY="265.0" prefHeight="358.0" prefWidth="322.0" styleClass="vbox" stylesheets="@stylea.css">
+                     <children>
+                        <Button fx:id="noticebtn" mnemonicParsing="false" onAction="#switchform2" prefHeight="52.0" prefWidth="252.0" styleClass="side-btn" stylesheets="@stylea.css" text="Notice" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="30.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="pvtchatbtn" mnemonicParsing="false" onAction="#switchform2" prefHeight="52.0" prefWidth="252.0" styleClass="side-btn" stylesheets="@stylea.css" text="Private Chat" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="45.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="assbtn" mnemonicParsing="false" onAction="#switchform2" prefHeight="52.0" prefWidth="252.0" styleClass="side-btn" stylesheets="@stylea.css" text="Assignment" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="45.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="chatbotform" layoutX="241.0" layoutY="6.0" prefHeight="823.0" prefWidth="559.0" visible="false">
+               <children>
+                  <TextArea fx:id="area" editable="false" layoutX="70.0" layoutY="95.0" prefHeight="583.0" prefWidth="420.0">
+                     <font>
+                        <Font name="Segoe UI Bold" size="13.0" />
+                     </font>
+                  </TextArea>
+                  <TextField fx:id="userInput" layoutX="70.0" layoutY="700.0" prefHeight="39.0" prefWidth="342.0" style="-fx-border-color: white;" styleClass="side-chat" stylesheets="@stylea.css" />
+                  <Button layoutX="427.0" layoutY="700.0" mnemonicParsing="false" onAction="#handleUserInput" prefHeight="37.0" prefWidth="85.0" styleClass="side-btn" stylesheets="@stylea.css" text="Send">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="231.0" layoutY="760.0" mnemonicParsing="false" onAction="#handleBotHistory" prefHeight="39.0" prefWidth="98.0" styleClass="side-btn" stylesheets="@stylea.css" text="History">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Text fill="WHITE" layoutX="47.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chat with chatbot">
+                     <font>
+                        <Font name="Algerian" size="50.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="bmi" layoutX="238.0" layoutY="2.0" prefHeight="817.0" prefWidth="559.0" visible="false">
+               <children>
+                  <AnchorPane layoutX="103.0" layoutY="21.0" prefHeight="190.0" prefWidth="314.0" styleClass="vbox" stylesheets="@stylea.css">
+                     <children>
+                        <Text fill="WHITE" layoutX="29.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight" wrappingWidth="98.0">
+                           <font>
+                              <Font name="Bodoni MT" size="26.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Text>
+                        <TextField fx:id="weight" layoutX="31.0" layoutY="58.0" prefHeight="31.0" prefWidth="136.0" promptText="enter  weight" styleClass="side-chat" stylesheets="@stylea.css" />
+                        <Text fill="WHITE" layoutX="29.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hight" wrappingWidth="98.0">
+                           <font>
+                              <Font name="Bodoni MT" size="26.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Text>
+                        <TextField fx:id="hight" layoutX="29.0" layoutY="138.0" prefHeight="31.0" prefWidth="136.0" promptText="enter hight" styleClass="side-chat" stylesheets="@stylea.css" />
+                        <Button layoutX="190.0" layoutY="134.0" mnemonicParsing="false" onAction="#CalculateBmi" styleClass="side-btn" stylesheets="@stylea.css" text="Calculate" />
+                        <Button layoutX="201.0" layoutY="58.0" mnemonicParsing="false" onAction="#showHistory" styleClass="side-btn" stylesheets="@stylea.css" text="History" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="86.0" layoutY="234.0" prefHeight="149.0" prefWidth="367.0" styleClass="vbox" stylesheets="@stylea.css">
+                     <children>
+                        <TextArea fx:id="result" editable="false" layoutX="30.0" layoutY="62.0" prefHeight="81.0" prefWidth="308.0" />
+                        <Text fill="WHITE" layoutX="152.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BMI" wrappingWidth="98.0">
+                           <font>
+                              <Font name="Bodoni MT" size="26.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AreaChart fx:id="bmiChart" layoutX="-17.0" layoutY="409.0" prefHeight="400.0" prefWidth="571.0">
+                     <xAxis>
+                        <NumberAxis label="Entry Number" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis label="BMI" />
+                     </yAxis>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </AreaChart>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="calory" layoutX="235.0" layoutY="-1.0" prefHeight="823.0" prefWidth="571.0" visible="false">
+               <children>
+                  <TextField fx:id="foodInput1" layoutX="45.0" layoutY="75.0" prefHeight="39.0" prefWidth="196.0" promptText="food names" styleClass="side-chat" stylesheets="@stylea.css" />
+                  <TextField fx:id="calorieInput" layoutX="45.0" layoutY="137.0" prefHeight="39.0" prefWidth="196.0" promptText="calories" styleClass="side-chat" stylesheets="@stylea.css" />
+                  <DatePicker fx:id="datePicker" layoutX="285.0" layoutY="75.0" prefHeight="39.0" prefWidth="164.0" />
+                  <ComboBox fx:id="mealSelector" layoutX="285.0" layoutY="137.0" prefHeight="39.0" prefWidth="164.0" />
+                  <Button layoutX="344.0" layoutY="266.0" mnemonicParsing="false" onAction="#handleAddMeal" prefHeight="39.0" prefWidth="105.0" styleClass="side-btn" stylesheets="@stylea.css" text="OK" />
+                  <TextArea fx:id="resultAreap" editable="false" layoutX="55.0" layoutY="364.0" prefHeight="433.0" prefWidth="404.0" wrapText="true" />
+                  <TextField fx:id="goalInput" layoutX="51.0" layoutY="203.0" prefHeight="39.0" prefWidth="123.0" promptText="set calory goal" styleClass="side-chat" stylesheets="@stylea.css" />
+                  <Button layoutX="204.0" layoutY="203.0" mnemonicParsing="false" onAction="#handleSetGoal" prefHeight="39.0" prefWidth="105.0" styleClass="side-btn" stylesheets="@stylea.css" text="Set" />
+                  <ProgressBar fx:id="progressBar1" layoutX="55.0" layoutY="322.0" prefHeight="31.0" prefWidth="404.0" progress="0.0" />
+                  <Button layoutX="204.0" layoutY="266.0" mnemonicParsing="false" onAction="#handleShowHistory" prefHeight="39.0" prefWidth="105.0" styleClass="side-btn" stylesheets="@stylea.css" text="History" />
+                  <Button layoutX="55.0" layoutY="266.0" mnemonicParsing="false" onAction="#handleFinishDay" prefHeight="39.0" prefWidth="105.0" styleClass="side-btn" stylesheets="@stylea.css" text="Finish" />
+                  <Button layoutX="344.0" layoutY="203.0" mnemonicParsing="false" onAction="#handleClearTextArea" prefHeight="39.0" prefWidth="105.0" styleClass="side-btn" stylesheets="@stylea.css" text="Clear" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="notice" layoutX="238.0" layoutY="2.0" prefHeight="817.0" prefWidth="559.0" visible="false">
+               <children>
+                  <Text fill="WHITE" layoutX="104.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notice Board">
+                     <font>
+                        <Font name="Algerian" size="50.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane layoutX="73.0" layoutY="179.0" prefHeight="570.0" prefWidth="404.0" styleClass="vbox" stylesheets="@stylea.css">
+                     <children>
+                        <TextArea fx:id="noticeTextArea" layoutX="45.0" layoutY="72.0" prefHeight="426.0" prefWidth="314.0" />
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="24.0" layoutY="28.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="39.0" prefWidth="98.0" styleClass="side-btn" stylesheets="@stylea.css" text="🔙" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ass" layoutX="249.0" layoutY="8.0" prefHeight="823.0" prefWidth="543.0" visible="false">
+               <children>
+                  <Text fill="WHITE" layoutX="138.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task Area">
+                     <font>
+                        <Font size="63.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane layoutX="46.0" layoutY="205.0" prefHeight="558.0" prefWidth="451.0" styleClass="vbox" stylesheets="@stylea.css">
+                     <children>
+                        <TextArea fx:id="assign1TextArea" layoutX="51.0" layoutY="33.0" prefHeight="382.0" prefWidth="349.0" />
+                        <TextField fx:id="assign1TextField" layoutX="51.0" layoutY="444.0" prefHeight="39.0" prefWidth="349.0" styleClass="side-chat" stylesheets="@stylea.css" />
+                        <ComboBox fx:id="progressComboBox" layoutX="151.0" layoutY="497.0" onAction="#onUpdateProgress" prefHeight="35.0" prefWidth="150.0" promptText="Update progress . . ." style="-fx-background-color: white; -fx-background-radius: 15;" />
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="46.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="39.0" prefWidth="98.0" styleClass="side-btn" text="🔙" />
+                  <Text fill="WHITE" layoutX="323.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reward🏆" wrappingWidth="105.0">
+                     <font>
+                        <Font name="Algerian" size="19.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="coinLabel" layoutX="428.0" layoutY="25.0" prefHeight="31.0" prefWidth="105.0" text="0" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="publicchat" layoutX="246.0" layoutY="8.0" prefHeight="823.0" prefWidth="543.0" visible="false">
+               <children>
+                  <Text fill="WHITE" layoutX="120.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Public chat">
+                     <font>
+                        <Font name="Algerian" size="50.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane layoutX="46.0" layoutY="205.0" prefHeight="558.0" prefWidth="451.0" styleClass="vbox" stylesheets="@stylea.css">
+                     <children>
+                        <TextArea fx:id="allTextArea" layoutX="51.0" layoutY="33.0" prefHeight="382.0" prefWidth="349.0" />
+                        <TextField fx:id="msgTextField" layoutX="51.0" layoutY="444.0" prefHeight="39.0" prefWidth="349.0" styleClass="side-chat" stylesheets="@stylea.css" />
+                        <Button fx:id="member_Public_chat_sendBtn" layoutX="200.0" layoutY="509.0" mnemonicParsing="false" styleClass="side-btn" stylesheets="@stylea.css" text="Send" />
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="34.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="39.0" prefWidth="98.0" styleClass="side-btn" stylesheets="@stylea.css" text="🔙" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="privatechat" layoutX="234.0" layoutY="16.0" prefHeight="823.0" prefWidth="550.0" visible="false">
+               <children>
+                  <Text fill="WHITE" layoutX="120.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Private chat">
+                     <font>
+                        <Font name="Algerian" size="50.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane layoutX="46.0" layoutY="181.0" prefHeight="558.0" prefWidth="451.0" styleClass="vbox" stylesheets="@stylea.css">
+                     <children>
+                        <TextArea fx:id="chat1TextArea" layoutX="51.0" layoutY="33.0" prefHeight="382.0" prefWidth="349.0" />
+                        <TextField fx:id="chat1TextField" layoutX="51.0" layoutY="444.0" prefHeight="39.0" prefWidth="349.0" styleClass="side-chat" stylesheets="@stylea.css" />
+                        <Button fx:id="member_send_to_coachBtn" layoutX="200.0" layoutY="509.0" mnemonicParsing="false" onAction="#onSendToCoach" styleClass="side-btn" stylesheets="@stylea.css" text="Send" />
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="31.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="39.0" prefWidth="98.0" styleClass="side-btn" stylesheets="@stylea.css" text="🔙" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="plang" layoutX="243.0" layoutY="8.0" prefHeight="823.0" prefWidth="550.0" visible="false">
+               <children>
+                  <Label layoutX="51.0" layoutY="29.0" prefHeight="97.0" prefWidth="476.0" text="Workout paln Generator" textFill="#f5f5f5">
+                     <font>
+                        <Font name="Algerian" size="33.0" />
+                     </font>
+                  </Label>
+                  <ProgressBar fx:id="progressBar" layoutX="51.0" layoutY="126.0" prefHeight="31.0" prefWidth="442.0" progress="0.0" />
+                  <TextArea fx:id="workoutPlanArea" layoutX="54.0" layoutY="177.0" prefHeight="400.0" prefWidth="442.0" />
+                  <ComboBox fx:id="goalSelector" layoutX="54.0" layoutY="602.0" prefHeight="25.0" prefWidth="442.0" promptText="choose" styleClass="side-btn" stylesheets="@stylea.css" />
+                  <Button layoutX="146.0" layoutY="667.0" mnemonicParsing="false" onAction="#generateRandomPlan" prefHeight="52.0" prefWidth="252.0" styleClass="side-btn" stylesheets="@stylea.css" text="Pick" textFill="WHITE" />
+                  <Button layoutX="146.0" layoutY="735.0" mnemonicParsing="false" onAction="#handleDoneButton" prefHeight="52.0" prefWidth="252.0" styleClass="side-btn" stylesheets="@stylea.css" text="Done" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="carlo" layoutX="243.0" layoutY="6.0" prefHeight="823.0" prefWidth="550.0" visible="false">
+               <children>
+                  <Text fill="WHITE" layoutX="14.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Check food calories" wrappingWidth="531.0546875">
+                     <font>
+                        <Font name="Algerian" size="50.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane layoutX="50.0" layoutY="219.0" prefHeight="413.0" prefWidth="460.0" styleClass="vbox" stylesheets="@stylea.css">
+                     <children>
+                        <TextArea fx:id="calorieResult" layoutX="24.0" layoutY="57.0" prefHeight="200.0" prefWidth="404.0" />
+                        <TextField fx:id="foodInput" layoutX="24.0" layoutY="307.0" prefHeight="41.0" prefWidth="404.0" styleClass="side-chat" stylesheets="@stylea.css" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="819.0" prefWidth="237.0" styleClass="side-form2" stylesheets="@stylea.css">
+               <children>
+                  <Label fx:id="meber_name" layoutX="47.0" layoutY="42.0" prefHeight="69.0" prefWidth="144.0" text="Member">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="31.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="86.0" prefHeight="81.0" prefWidth="187.0" text="Dashboard">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="31.0" />
+                     </font>
+                  </Label>
+                  <VBox layoutX="17.0" layoutY="190.0" prefHeight="475.0" prefWidth="206.0" styleClass="vbox2" stylesheets="@stylea.css">
+                     <children>
+                        <Button fx:id="chat" mnemonicParsing="false" onAction="#switchform" prefHeight="52.0" prefWidth="252.0" styleClass="side-btn" stylesheets="@stylea.css" text="Chat" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="plan" mnemonicParsing="false" onAction="#switchform" prefHeight="52.0" prefWidth="252.0" styleClass="side-btn" stylesheets="@stylea.css" text="Food " textFill="WHITE">
+                           <VBox.margin>
+                              <Insets top="25.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="chatbot" mnemonicParsing="false" onAction="#switchform" prefHeight="52.0" prefWidth="252.0" styleClass="side-btn" stylesheets="@stylea.css" text="ChatBot" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets top="25.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bmibutton" mnemonicParsing="false" onAction="#switchform" prefHeight="52.0" prefWidth="252.0" styleClass="side-btn" stylesheets="@stylea.css" text="Bmi Calculator" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets top="25.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="plangenerator" mnemonicParsing="false" onAction="#switchform" prefHeight="52.0" prefWidth="252.0" styleClass="side-btn" stylesheets="@stylea.css" text="Plan Generator" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets top="25.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="calorie" mnemonicParsing="false" onAction="#switchform" prefHeight="52.0" prefWidth="252.0" styleClass="side-btn" stylesheets="@stylea.css" text="Calorie Check" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets top="25.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Button layoutX="57.0" layoutY="723.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="39.0" prefWidth="123.0" styleClass="side-btn" stylesheets="@stylea.css" text="Exit" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
